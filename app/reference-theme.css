@@ -1,0 +1,1350 @@
+/* Visual direction from the user's supplied references.
+   Shared structure and interactions; two deliberately different work densities. */
+.manager-shell {
+  color-scheme: dark;
+  --canvas: #202735;
+  --paper: #293343;
+  --sidebar: #1c2431;
+  --ink: #edf2f7;
+  --muted: #a1afc0;
+  --line: #3a4759;
+  --accent: #158cdd;
+  --accent-hover: #299eed;
+  --shadow: 0 12px 30px #09121d12;
+  --kitchen: #284d4b;
+  --cash: #514737;
+  --service: #284965;
+  --theme-secondary: #b7c3d1;
+  --theme-caption: #9aaabd;
+  color: var(--ink);
+  background: var(--canvas);
+}
+.manager-shell .sidebar {
+  background: var(--sidebar);
+  border-color: #303b4b;
+}
+.manager-shell .main-shell {
+  background: var(--canvas);
+}
+.manager-shell .brand {
+  font-weight: 600;
+  letter-spacing: -1.6px;
+}
+.manager-shell .brand-icon {
+  border-radius: 10px;
+  background: #168ddd;
+}
+.manager-shell .brand-dot,
+.manager-shell .orange-dot {
+  color: #2ca5f3;
+}
+.manager-shell .workspace-label,
+.manager-shell .nav-label {
+  color: #8495ab;
+}
+.manager-shell .restaurant-switch {
+  background: #273242;
+  border-color: #3b495b;
+  border-radius: 11px;
+}
+.manager-shell .restaurant-switch small {
+  color: #a4b2c4;
+}
+.manager-shell .restaurant-icon {
+  background: #344356;
+  color: #b8cbdf;
+}
+.manager-shell .restaurant-switch > svg {
+  color: #98abc1;
+}
+.manager-shell nav button {
+  color: #aab9cb;
+  border-radius: 9px;
+  font-size: 12px;
+}
+.manager-shell nav button svg {
+  color: #8ea2bd;
+}
+.manager-shell nav button:hover {
+  background: #2c384a;
+  color: #f0f6fb;
+}
+.manager-shell nav button.active {
+  background: #176fa633;
+  color: #73c7ff;
+  box-shadow: inset 3px 0 #2ba7f3;
+}
+.manager-shell nav button.active svg {
+  color: #47b5fc;
+}
+.manager-shell nav button em {
+  background: #354c61;
+  color: #acddff;
+}
+.manager-shell .nav-divider,
+.manager-shell .profile {
+  border-color: #344051;
+}
+.manager-shell .help-card {
+  background: #263547;
+  border-color: #3c4b5e;
+  border-radius: 12px;
+}
+.manager-shell .help-card strong {
+  color: #cfdfed;
+  font-weight: 500;
+}
+.manager-shell .help-card p {
+  color: #a2b3c8;
+}
+.manager-shell .help-card button,
+.manager-shell .help-spark {
+  color: #6fbeef;
+}
+.manager-shell .profile small {
+  color: #9daec2;
+}
+.manager-shell .topbar {
+  background: #202735;
+  border-color: #354153;
+}
+.manager-shell .breadcrumb {
+  color: #a5b3c5;
+}
+.manager-shell .breadcrumb strong {
+  color: #e1e8f0;
+}
+.manager-shell .top-actions .live-dot {
+  background: #68beab;
+}
+.manager-shell .saved-label {
+  color: #a1b1c4;
+}
+.manager-shell .demo-switch {
+  color: #bac8da;
+  border-color: #414d5f;
+}
+.manager-shell .demo-switch:hover {
+  color: #67c7ff;
+}
+.manager-shell .icon-button {
+  color: #b9c7d8;
+}
+.manager-shell .icon-button:hover {
+  background: #344255;
+}
+.manager-shell .eyebrow {
+  color: #95a7bc;
+}
+.manager-shell .eyebrow span {
+  color: #596e86;
+}
+.manager-shell h1 {
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: -1.2px;
+}
+.manager-shell .page-heading p {
+  color: #aab8c9;
+  font-size: 12px;
+}
+.manager-shell .button {
+  border-radius: 8px;
+  font-size: 11px;
+}
+.manager-shell .button.primary,
+.manager-shell .button.dark {
+  background: #168cdb;
+  color: #fff;
+  border-color: #2d9de3;
+  box-shadow: 0 4px 13px #087aca16;
+}
+.manager-shell .button.primary:hover,
+.manager-shell .button.dark:hover {
+  background: #299fee;
+}
+.manager-shell .button.secondary {
+  background: #2b3748;
+  color: #d1dce9;
+  border-color: #4b5b70;
+}
+.manager-shell .button.secondary:hover {
+  background: #37465a;
+  border-color: #6a819c;
+}
+.manager-shell .button.danger {
+  background: #493b3f;
+  color: #ffc2ab;
+  border-color: #795648;
+}
+.manager-shell .surface,
+.manager-shell .schedule-surface,
+.manager-shell .stat,
+.manager-shell .team-card,
+.manager-shell .request-card {
+  background: var(--paper);
+  border-color: var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.manager-shell .stat {
+  min-height: 92px;
+}
+.manager-shell .stat small {
+  color: #adbbcc;
+  font-size: 10px;
+}
+.manager-shell .stat strong {
+  color: #f5f8fc;
+  font-weight: 500;
+}
+.manager-shell .stat strong span {
+  color: #a4b4c6;
+}
+.manager-shell .stat-icon.green {
+  background: #304f49;
+  color: #90d2bd;
+}
+.manager-shell .stat-icon.violet {
+  background: #354960;
+  color: #9bc9f0;
+}
+.manager-shell .stat-icon.orange {
+  background: #514538;
+  color: #e4bc81;
+}
+.manager-shell .stat .tiny-tag {
+  background: #504636;
+  color: #e4c28e;
+}
+.manager-shell .avatar-stack > span:last-child {
+  color: #c6d6e9;
+  background: #3a4a60;
+  border-color: var(--paper);
+}
+.manager-shell .avatar-stack .avatar {
+  border-color: var(--paper);
+}
+.manager-shell .stat-action:hover {
+  background: #303c4d;
+  border-color: #6a7b8e;
+}
+.manager-shell .stat-action > svg {
+  color: #9eb0c6;
+}
+.manager-shell .schedule-toolbar,
+.manager-shell .section-heading {
+  border-color: var(--line);
+}
+.manager-shell .schedule-toolbar {
+  padding: 20px;
+}
+.manager-shell .segmented {
+  background: #202b3a;
+  border-color: #39485a;
+}
+.manager-shell .segmented button {
+  color: #a7b8cc;
+  font-size: 11px;
+}
+.manager-shell .segmented button.selected {
+  color: #eff6ff;
+  background: #43536a;
+  box-shadow: 0 2px 4px #0002;
+}
+.manager-shell .date-nav > span {
+  color: #e1e9f3;
+  font-size: 12px;
+}
+.manager-shell .date-nav button {
+  color: #a8bbd1;
+  border: 1px solid #405168;
+  border-radius: 50%;
+  width: 25px;
+}
+.manager-shell .date-nav button:hover {
+  background: #40536c;
+  color: #fff;
+}
+.manager-shell .today-button {
+  border-color: #4b5d73;
+  color: #c4d5e8;
+  background: #303e50;
+}
+.manager-shell .zone-tabs button {
+  color: #a8bbcd;
+  font-size: 11px;
+}
+.manager-shell .zone-tabs button.selected {
+  color: #8ed3ff;
+}
+.manager-shell .zone-tabs button.selected:after {
+  background: #2da5ed;
+}
+.manager-shell .zone-tabs button > span {
+  color: #c6d9ed;
+  background: #3c4d63;
+}
+.manager-shell .zone-tabs i.kitchen,
+.manager-shell .legend i.kitchen {
+  background: #72b8a7;
+}
+.manager-shell .zone-tabs i.cash,
+.manager-shell .legend i.cash {
+  background: #d1b27b;
+}
+.manager-shell .zone-tabs i.service,
+.manager-shell .legend i.service {
+  background: #76afe2;
+}
+.manager-shell .search-field {
+  color: #a3b5cb;
+}
+.manager-shell .search-field input {
+  color: #dfebf9;
+  font-size: 10px;
+}
+.manager-shell .search-field input::placeholder {
+  color: #acbdd1;
+}
+.manager-shell .status-filter {
+  border-color: #455469;
+  color: #b6c7dc;
+}
+.manager-shell .status-filter select {
+  color: #b6c7dc;
+  font-size: 10px;
+}
+.manager-shell .calendar-head {
+  background: #2b384a;
+  border-color: #3d4c61;
+}
+.manager-shell .people-head {
+  color: #b2c2d5;
+  font-size: 10px;
+}
+.manager-shell .people-head span {
+  background: #41536a;
+  color: #d1e0f0;
+}
+.manager-shell .day-head {
+  border-color: #3b4a5d;
+  padding: 13px 12px;
+  min-height: 81px;
+}
+.manager-shell .day-head > span {
+  color: #adbed3;
+  font-size: 10px;
+}
+.manager-shell .day-head strong {
+  color: #e4edf7;
+  font-size: 25px;
+  font-weight: 400;
+}
+.manager-shell .day-head strong em {
+  color: #adc0d7;
+  font-size: 10px;
+}
+.manager-shell .day-head.is-today {
+  background: #176c9c;
+}
+.manager-shell .day-head.is-today strong,
+.manager-shell .day-head.is-today > span {
+  color: #fff;
+}
+.manager-shell .day-head.is-today em {
+  color: #c4e6fb;
+}
+.manager-shell .day-head.is-today i {
+  background: #92d8ff;
+}
+.manager-shell .calendar-row {
+  border-color: #3b4a5e;
+}
+.manager-shell .employee-cell {
+  background: #293343;
+}
+.manager-shell .employee-cell:hover {
+  background: #334256;
+}
+.manager-shell .employee-cell strong {
+  color: #e3ebf5;
+  font-size: 11px;
+}
+.manager-shell .employee-cell small {
+  color: #b0bed0;
+  font-size: 9px;
+}
+.manager-shell .day-cell {
+  border-color: #3b4a5e;
+  background: #2b384b;
+  padding: 8px;
+}
+.manager-shell .day-cell.today-cell {
+  background: #2a3e52;
+}
+.manager-shell .kitchen {
+  --zone-ink: #c1ece0;
+  background: #304f4c;
+}
+.manager-shell .cash {
+  --zone-ink: #f0d4a5;
+  background: #514b3d;
+}
+.manager-shell .service {
+  --zone-ink: #c0def9;
+  background: #304f6d;
+}
+.manager-shell .shift-card {
+  border-radius: 9px;
+  border: 1px solid #ffffff18;
+  box-shadow: inset 0 1px #ffffff06;
+}
+.manager-shell .shift-card:hover {
+  border-color: #ffffff50;
+  box-shadow: 0 5px 15px #0e172230;
+}
+.manager-shell .shift-time {
+  font-size: 11px;
+  font-weight: 500;
+}
+.manager-shell .shift-zone {
+  font-size: 9px;
+  opacity: 0.95;
+}
+.manager-shell .shift-zone > span {
+  font-size: 8px;
+}
+.manager-shell .shift-status {
+  opacity: 1;
+  font-size: 8px;
+  border-color: #ffffff18;
+}
+.manager-shell .status-check {
+  background: #ffffff16;
+}
+.manager-shell .shift-card.pending,
+.manager-shell .timeline-shift.pending {
+  background: #394454;
+  color: #dfcfa9;
+  border: 1px dashed #9a8b6d;
+}
+.manager-shell .shift-card.conflict {
+  background: #574144;
+  color: #ffd1bd;
+  border: 1px solid #bb8775;
+}
+.manager-shell .empty-slot {
+  color: #a9b9cb;
+}
+.manager-shell .empty-slot > span {
+  font-size: 9px;
+}
+.manager-shell .empty-slot > small {
+  color: #a4b8ce;
+  font-size: 8px;
+}
+.manager-shell .empty-slot:hover {
+  background: #35506b;
+  border-color: #5c7c9d;
+  color: #dae9f8;
+}
+.manager-shell .empty-slot.unavailable {
+  color: #92a0b4;
+}
+.manager-shell .coverage-row {
+  background: #273342;
+}
+.manager-shell .coverage-row > div {
+  color: #b5c7dc;
+}
+.manager-shell .coverage-row > div small {
+  color: #96aabe;
+}
+.manager-shell .coverage-icon {
+  background: #344e61;
+  color: #9fd3f5;
+}
+.manager-shell .coverage-row button {
+  border-color: #3d4c60;
+}
+.manager-shell .coverage-row button:hover {
+  background: #33465b;
+}
+.manager-shell .coverage-row button > span {
+  font-size: 9px;
+}
+.manager-shell .coverage-row button > small {
+  color: #9eafc4;
+  font-size: 8px;
+}
+.manager-shell .coverage-lack {
+  color: #e2bf88;
+}
+.manager-shell .coverage-ok {
+  color: #9ad2be;
+}
+.manager-shell .calendar-footer {
+  color: #9eb1c8;
+  border-color: #3d4c60;
+  font-size: 9px;
+}
+.manager-shell .legend > span {
+  color: #b6c7dc;
+  font-size: 9px;
+}
+.manager-shell .legend i.pending-key {
+  background: #3c4959;
+  border-color: #b4a07b;
+}
+.manager-shell .schedule-note {
+  color: #9dacc0;
+  font-size: 10px;
+}
+.manager-shell .schedule-note strong {
+  color: #cad8e9;
+}
+.manager-shell .schedule-note > span svg,
+.manager-shell .schedule-note button {
+  color: #80bddf;
+}
+.manager-shell .app-footer,
+.manager-shell .app-footer > span:first-child {
+  color: #94a7bc;
+}
+.manager-shell .info-banner {
+  background: #2c4252;
+  border-color: #3f5c70;
+  color: #93c4e5;
+}
+.manager-shell .info-banner strong {
+  color: #cfebff;
+}
+.manager-shell .info-banner p {
+  color: #b4c9da;
+}
+.manager-shell .count-pill {
+  background: #36526a;
+  color: #bce5ff;
+}
+.manager-shell .text-button {
+  color: #87caff;
+}
+.manager-shell .text-button:hover {
+  color: #d0eeff;
+}
+.manager-shell .muted {
+  color: #acbcd0 !important;
+}
+.manager-shell th {
+  background: #2e3c4e;
+  color: #acbfd6;
+}
+.manager-shell th,
+.manager-shell td {
+  border-color: #3a495d;
+}
+.manager-shell td {
+  color: #c7d4e4;
+  font-size: 12px;
+}
+.manager-shell td strong {
+  color: #e2edf8;
+  font-size: 12px;
+}
+.manager-shell td small {
+  color: #a7bad0;
+  font-size: 11px;
+}
+.manager-shell tbody tr:hover {
+  background: #303f52;
+}
+.manager-shell .zone-label {
+  color: var(--zone-ink);
+  font-size: 10px;
+}
+.manager-shell .balance.negative {
+  background: #514735;
+  color: #efca8c;
+}
+.manager-shell .balance.positive {
+  background: #305047;
+  color: #a4dbc5;
+}
+.manager-shell .balance.excess {
+  background: #324e6d;
+  color: #badcff;
+}
+.manager-shell .inline-edit {
+  color: #bdd0e4;
+}
+.manager-shell .search-field.large {
+  background: #2c394b;
+  border-color: #4c5e75;
+}
+.manager-shell input,
+.manager-shell select,
+.manager-shell textarea {
+  background-color: #303e51;
+  color: #e0ebf8;
+  border-color: #52647b;
+}
+.manager-shell input:focus,
+.manager-shell select:focus,
+.manager-shell textarea:focus {
+  border-color: #54b7f5;
+  box-shadow: 0 0 0 3px #168cdb25;
+}
+.manager-shell input::placeholder,
+.manager-shell textarea::placeholder {
+  color: #a5b6cc;
+}
+.manager-shell input[type="checkbox"] {
+  accent-color: #299fee;
+}
+.manager-shell .search-field input,
+.manager-shell .status-filter select {
+  background-color: transparent;
+}
+.manager-shell .team-card:hover {
+  background: #303e51;
+  border-color: #7088a4;
+}
+.manager-shell .team-card-top > svg {
+  color: #8eb6dd;
+}
+.manager-shell .team-load > span,
+.manager-shell .team-card-bottom {
+  color: #afc1d5;
+}
+.manager-shell .team-load strong {
+  color: #e2effd;
+}
+.manager-shell .team-load small {
+  color: #a4b9d1;
+}
+.manager-shell .progress {
+  background: #405169;
+}
+.manager-shell .progress i {
+  background: #61ade3;
+}
+.manager-shell .request-main > p {
+  color: #d0dce9;
+}
+.manager-shell .request-main > small {
+  color: #9fb2c9;
+}
+.manager-shell .request-meta,
+.manager-shell .request-meta > span {
+  color: #b6c8db;
+}
+.manager-shell .badge.pending {
+  background: #514834;
+  color: #e9ce9e;
+}
+.manager-shell .badge.confirmed,
+.manager-shell .badge.approved {
+  background: #325047;
+  color: #b5e4cf;
+}
+.manager-shell .badge.declined {
+  background: #5a4144;
+  color: #f3c1b2;
+}
+.manager-shell .timeline-event p {
+  color: #d4e0ed;
+}
+.manager-shell .timeline-event small {
+  color: #a3b7cd;
+}
+.manager-shell .timeline-event:before {
+  background: #43546b;
+}
+.manager-shell .timeline-dot {
+  background: #36516a;
+  color: #a7d9ff;
+}
+.manager-shell .notification-item {
+  border-color: #3c4c60;
+}
+.manager-shell .notification-item.unread {
+  background: #2c3e52;
+}
+.manager-shell .notification-item p {
+  color: #c5d7e8;
+}
+.manager-shell .notification-item small {
+  color: #9eb3cb;
+}
+.manager-shell .notification-icon {
+  background: #3a526a;
+  color: #a2d7fb;
+}
+.manager-shell .overview-feature {
+  background: #284761;
+  border-color: #3f6480;
+}
+.manager-shell .overview-feature h2 {
+  color: #e8f5ff;
+}
+.manager-shell .overview-feature > p {
+  color: #b8d0e4;
+}
+.manager-shell .overview-bars i {
+  background: #58a5d9;
+}
+.manager-shell .overview-bars span {
+  color: #d0e9fb;
+}
+.manager-shell .inbox-preview {
+  border-color: #3e4d61;
+}
+.manager-shell .inbox-preview small {
+  color: #a4b7ce;
+}
+.manager-shell .gap-card {
+  background: #2d3c50;
+  border-color: #455973;
+}
+.manager-shell .gap-card > div > span:last-child {
+  color: #b1c5dc;
+}
+.manager-shell .gap-card h3 {
+  color: #dceeff;
+}
+.manager-shell .gap-card p {
+  color: #e4c08e;
+}
+.manager-shell .day-picker {
+  border-color: #3c4b60;
+}
+.manager-shell .day-picker button {
+  color: #b3c5db;
+}
+.manager-shell .day-picker button.selected {
+  color: #def3ff;
+  background: #21658c;
+  border-color: #428db9;
+}
+.manager-shell .timeline-header {
+  background: #2b394c;
+  border-color: #43536a;
+}
+.manager-shell .timeline-header > span,
+.manager-shell .timeline-header > div {
+  color: #acbfd7;
+}
+.manager-shell .timeline-person {
+  border-color: #3a4b60;
+}
+.manager-shell .timeline-track {
+  background: #2b384a;
+}
+.manager-shell .timeline-track > i {
+  border-color: #3d4e64;
+}
+.manager-shell .empty {
+  color: #9bb4cb;
+}
+.manager-shell .empty h3 {
+  color: #d5e5f4;
+}
+.manager-shell .empty p {
+  color: #a4b9d0;
+}
+/* Drawers belong to the same manager workspace, including validation states. */
+.manager-shell .side-panel,
+.manager-shell .panel-bottom {
+  background: #263244;
+  color: #e9f0f8;
+  border-color: #43536b;
+}
+.manager-shell .panel-backdrop {
+  background: #080e19a1;
+}
+.manager-shell .panel-description {
+  color: #b2c3d8;
+}
+.manager-shell .form-label {
+  color: #bacee3;
+}
+.manager-shell .form-label input,
+.manager-shell .form-label select,
+.manager-shell .form-label textarea {
+  color: #e5f0fc;
+}
+.manager-shell .candidates-heading h3,
+.manager-shell .candidates-heading > span {
+  color: #afd9f7;
+}
+.manager-shell .candidate-explanation {
+  color: #b2c5db;
+}
+.manager-shell .candidate {
+  background: #2c3b4f;
+  border-color: #4b5f79;
+}
+.manager-shell .candidate.selected {
+  background: #294d69;
+  border-color: #55b5f3;
+  box-shadow: 0 0 0 1px #55b5f3;
+}
+.manager-shell .candidate:hover {
+  background: #334b65;
+  border-color: #74a0c6;
+}
+.manager-shell .candidate.ineligible {
+  background: #2b3647;
+  opacity: 0.7;
+}
+.manager-shell .candidate-top small {
+  color: #a7bdd5;
+}
+.manager-shell .recommended {
+  color: #a9dfff;
+  background: #21577a;
+}
+.manager-shell .radio-circle {
+  border-color: #7892af;
+}
+.manager-shell .selected .radio-circle {
+  background: #269bdf;
+  border-color: #269bdf;
+}
+.manager-shell .candidate-reasons {
+  border-color: #486079;
+}
+.manager-shell .candidate-reasons > span {
+  color: #bdd3e8;
+}
+.manager-shell .checkbox-label {
+  color: #c4d6e9;
+}
+.manager-shell .checkbox-label small {
+  color: #a4bad1;
+}
+.manager-shell .confirm-check {
+  color: #9cd8ff;
+  background: #2a5573;
+}
+.manager-shell .confirm-content > p {
+  color: #b8cce2;
+}
+.manager-shell .confirmation-summary {
+  background: #2d4057;
+  border-color: #4f6886;
+}
+.manager-shell .confirmation-summary > span:first-child {
+  color: #b7d0e8;
+}
+.manager-shell .detail-person small,
+.manager-shell .detail-list dt {
+  color: #b0c3da;
+}
+.manager-shell .detail-list > div {
+  border-color: #435670;
+}
+.manager-shell .detail-list dd {
+  color: #d5e7fa;
+}
+.manager-shell .shift-detail-hero {
+  color: var(--zone-ink);
+}
+.manager-shell .shift-detail-hero .badge,
+.manager-shell .shift-detail-hero .zone-label {
+  background: #0e1c2a25;
+}
+.manager-shell .shift-action-note {
+  background: #2d4259;
+  color: #b8d5ee;
+}
+.manager-shell .shift-action-note p {
+  color: #bbd0e5;
+}
+.manager-shell .panel-section-title {
+  color: #b8dcf8;
+}
+.manager-shell .profile-shifts {
+  border-color: #465b75;
+}
+.manager-shell .profile-shifts > div {
+  color: #c3d5e9;
+  border-color: #40536d;
+}
+.manager-shell .profile-shifts strong {
+  color: #d0e8fc;
+}
+.manager-shell .profile-shifts small {
+  color: #a8c3df;
+}
+.manager-shell .help-hero {
+  background: #2b4e68;
+  color: #93cdef;
+}
+.manager-shell .help-hero h3 {
+  color: #d7eeff;
+}
+.manager-shell .help-step > span {
+  color: #8aafd0;
+}
+.manager-shell .help-step h3 {
+  color: #c4e2f7;
+}
+.manager-shell .help-step p {
+  color: #afc5dc;
+}
+.manager-shell .form-error,
+.manager-shell .conflict-alert,
+.manager-shell .confirm-cancel {
+  background: #4a3940;
+  color: #f2c1ad;
+  border-color: #7f5852;
+}
+.manager-shell .confirm-cancel strong,
+.manager-shell .confirm-cancel p {
+  color: #f0c8b6;
+}
+.manager-shell .toast {
+  background: #263e53;
+  border: 1px solid #56738e;
+}
+.manager-shell .toast > svg {
+  color: #80c7ef;
+}
+/* Employee: the quiet, editorial light reference, translated into everyday actions. */
+.employee-shell {
+  color-scheme: light;
+  --canvas: #f1f2f1;
+  --paper: #ffffff;
+  --sidebar: #e9ebe8;
+  --ink: #252927;
+  --line: #dcdedc;
+  --accent: #2b302e;
+  --accent-hover: #454d48;
+  color: var(--ink);
+  background: var(--canvas);
+}
+.employee-shell .main-shell {
+  background: #f1f2f1;
+}
+.employee-shell .sidebar {
+  background: #e9ebe8;
+  border-color: #d6dbd4;
+}
+.employee-shell .brand {
+  font-weight: 600;
+}
+.employee-shell .brand-icon {
+  background: #303633;
+}
+.employee-shell .brand-dot,
+.employee-shell .orange-dot {
+  color: #6b807b;
+}
+.employee-shell .restaurant-switch {
+  background: #f7f8f5;
+  border-color: #d4dad3;
+  border-radius: 13px;
+}
+.employee-shell nav button {
+  border-radius: 24px;
+}
+.employee-shell nav button.active {
+  background: #d4ded8;
+  color: #31473c;
+}
+.employee-shell nav button.active svg {
+  color: #3d6452;
+}
+.employee-shell .topbar {
+  background: #f7f8f6;
+  border-color: #dce0da;
+}
+.employee-shell h1 {
+  font-size: 43px;
+  letter-spacing: -1.9px;
+  font-weight: 400;
+}
+.employee-shell .page-heading p {
+  color: #78817c;
+  font-size: 12px;
+}
+.employee-shell .button {
+  border-radius: 24px;
+  padding: 12px 19px;
+  font-size: 11px;
+}
+.employee-shell .button.primary,
+.employee-shell .button.dark {
+  background: #303633;
+  color: white;
+  border-color: #303633;
+  box-shadow: none;
+}
+.employee-shell .button.primary:hover,
+.employee-shell .button.dark:hover {
+  background: #49564e;
+}
+.employee-shell .button.secondary {
+  border-color: #ccd3cc;
+}
+.employee-shell .surface,
+.employee-shell .request-card,
+.employee-shell .offers-section {
+  border-radius: 20px;
+  border-color: #dfe3dd;
+  box-shadow: none;
+}
+.employee-shell .employee-welcome {
+  background: #e1e7e3;
+  border: 0;
+  border-radius: 23px;
+  min-height: 210px;
+  padding: 33px;
+}
+.employee-shell .employee-welcome .eyebrow {
+  color: #677e71;
+}
+.employee-shell .employee-welcome h2 {
+  color: #314b3e;
+  font-size: 59px;
+  font-weight: 400;
+  letter-spacing: -2.8px;
+}
+.employee-shell .employee-welcome h2 span {
+  color: #486457;
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+.employee-shell .employee-welcome p {
+  color: #647d6e;
+  font-size: 12px;
+  max-width: 300px;
+}
+.employee-shell .welcome-symbol {
+  color: #87a196;
+}
+.employee-shell .availability-cta {
+  border-radius: 23px;
+  border: 0;
+  background: #fff;
+  box-shadow: none;
+  padding: 30px;
+}
+.employee-shell .availability-cta h3 {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.65px;
+  max-width: 210px;
+}
+.employee-shell .availability-cta p {
+  color: #788a7c;
+  font-size: 12px;
+}
+.employee-shell .round-icon {
+  background: #e8efeb;
+  color: #668d7b;
+}
+.employee-shell .availability-cta .text-button {
+  font-size: 12px;
+  color: #395b48;
+}
+.employee-shell .section-heading h2 {
+  font-size: 17px;
+  font-weight: 500;
+}
+.employee-shell .my-week-strip {
+  padding: 22px;
+  gap: 9px;
+}
+.employee-shell .my-week-strip button {
+  border-radius: 14px;
+}
+.employee-shell .my-week-strip button.selected {
+  background: #dce7e0;
+  border-color: #d2ddd6;
+}
+.employee-shell .my-week-strip button strong {
+  color: #3c5a48;
+  font-weight: 400;
+  font-size: 25px;
+}
+.employee-shell .my-week-strip button > span {
+  color: #6c8373;
+}
+.employee-shell .my-shift-card {
+  border-radius: 16px;
+  border-color: #d9e3db;
+  background: #f1f5f2;
+  padding: 27px;
+}
+.employee-shell .my-shift-card h3 {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -1.1px;
+}
+.employee-shell .my-shift-date strong {
+  color: #5c7e67;
+  font-weight: 400;
+}
+.employee-shell .my-shift-card p {
+  color: #627f6c;
+  font-size: 11px;
+}
+.employee-shell .help-card {
+  border-radius: 16px;
+  background: #dfe6e0;
+  border-color: #d5dfd4;
+}
+.employee-shell .help-card strong {
+  font-size: 17px;
+  font-weight: 400;
+}
+.employee-shell .side-panel {
+  background: #f7f9f6;
+}
+.employee-shell .panel-bottom {
+  background: #f7f9f6;
+}
+.employee-shell .panel-top .eyebrow {
+  color: #6d8272;
+}
+.employee-shell .side-panel > h2 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -1.1px;
+}
+.employee-shell .form-label input,
+.employee-shell .form-label select,
+.employee-shell .form-label textarea {
+  border-radius: 11px;
+}
+.employee-shell .availability-day {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+.employee-shell .availability-date strong {
+  font-size: 13px;
+  color: #4c6654;
+}
+.employee-shell .availability-times select {
+  border-radius: 12px;
+  color: #55705d;
+}
+.employee-shell .request-heading h3 {
+  font-size: 15px;
+}
+.employee-shell .request-main > p {
+  font-size: 13px;
+  color: #576b5c;
+}
+/* Entry point uses the same restrained editorial typography as the light reference. */
+.login-page {
+  --accent: #303633;
+  --accent-hover: #4b5750;
+  background: #f6f7f4;
+}
+.login-story {
+  background: #e5e9e4;
+}
+.login-page .brand-icon {
+  background: #303633;
+}
+.login-page .brand-dot {
+  color: #78928b;
+}
+.login-story h1 {
+  color: #29332e;
+  font-size: 58px;
+  font-weight: 400;
+  letter-spacing: -2.9px;
+}
+.login-story h1 > span {
+  color: #819f94;
+}
+.login-story > p {
+  color: #62786a;
+}
+.login-story > .eyebrow {
+  color: #647e6e;
+}
+.login-calendar {
+  border-radius: 21px;
+  background: #f9fbf8;
+  border-color: #d2dbd2;
+  box-shadow: 0 20px 40px #374b3710;
+}
+.login-form h2 {
+  font-weight: 400;
+  font-size: 43px;
+  letter-spacing: -1.8px;
+}
+.login-form .button {
+  border-radius: 24px;
+}
+.login-form .button.dark {
+  background: #303633;
+}
+.login-top-icon {
+  background: #e8ede8;
+  color: #597463;
+  border-color: #dce5da;
+  border-radius: 50%;
+}
+.login-divider span {
+  background: #f6f7f4;
+}
+@media (max-width: 1250px) {
+  .manager-shell .employee-cell strong {
+    font-size: 10px;
+  }
+  .manager-shell .employee-cell small {
+    font-size: 8px;
+  }
+  .manager-shell .shift-status {
+    font-size: 7px;
+  }
+  .manager-shell .shift-time {
+    font-size: 10px;
+  }
+  .manager-shell h1 {
+    font-size: 29px;
+  }
+  .manager-shell .stat strong span {
+    font-size: 9px;
+  }
+  .employee-shell .employee-welcome h2 {
+    font-size: 48px;
+  }
+  .employee-shell .employee-welcome h2 span {
+    font-size: 22px;
+  }
+}
+@media (max-width: 760px) {
+  .manager-shell h1 {
+    font-size: 29px;
+  }
+  .manager-shell .page-heading p {
+    font-size: 11px;
+  }
+  .manager-shell .stat {
+    min-height: 122px;
+  }
+  .manager-shell .stat small {
+    font-size: 8px;
+  }
+  .manager-shell .stat strong span {
+    font-size: 8px;
+  }
+  .manager-shell .schedule-toolbar {
+    padding: 14px 12px;
+  }
+  .manager-shell .segmented button {
+    font-size: 9px;
+  }
+  .manager-shell .date-nav > span {
+    font-size: 10px;
+  }
+  .manager-shell .zone-tabs {
+    gap: 17px;
+  }
+  .manager-shell .zone-tabs button {
+    font-size: 10px;
+  }
+  .manager-shell .calendar-head > div:first-child,
+  .manager-shell .calendar-row > button:first-child {
+    background: #293343;
+    border-color: #40516a;
+  }
+  .manager-shell .coverage-row > div:first-child {
+    background: #273342;
+    border-color: #40516a;
+  }
+  .manager-shell .calendar-footer {
+    font-size: 8px;
+  }
+  .manager-shell .legend > span {
+    font-size: 8px;
+  }
+  .employee-shell h1 {
+    font-size: 38px;
+  }
+  .employee-shell .page-heading p {
+    font-size: 11px;
+  }
+  .employee-shell .employee-welcome {
+    border-radius: 21px;
+    min-height: 185px;
+    padding: 27px;
+  }
+  .employee-shell .employee-welcome h2 {
+    font-size: 47px;
+  }
+  .employee-shell .employee-welcome h2 span {
+    font-size: 21px;
+  }
+  .employee-shell .employee-welcome p {
+    font-size: 11px;
+  }
+  .employee-shell .availability-cta {
+    border-radius: 21px;
+    padding: 23px 25px;
+  }
+  .employee-shell .availability-cta h3 {
+    font-size: 20px;
+    max-width: 210px;
+  }
+  .employee-shell .availability-cta p {
+    font-size: 11px;
+  }
+  .employee-shell .availability-cta .text-button {
+    font-size: 11px;
+  }
+  .employee-shell .my-week-strip {
+    padding: 15px 10px;
+    gap: 3px;
+  }
+  .employee-shell .my-week-strip button {
+    padding: 12px 5px;
+    border-radius: 12px;
+  }
+  .employee-shell .my-week-strip button strong {
+    font-size: 20px;
+  }
+  .employee-shell .my-shift-card {
+    padding: 20px 15px;
+  }
+  .employee-shell .my-shift-card h3 {
+    font-size: 23px;
+  }
+  .employee-shell .my-shift-card p {
+    font-size: 10px;
+  }
+  .employee-shell .availability-day {
+    padding: 20px 17px;
+  }
+  .employee-shell .availability-date strong {
+    font-size: 12px;
+  }
+  .employee-shell .button {
+    font-size: 10px;
+  }
+  .employee-shell .date-nav > span {
+    font-size: 10px;
+  }
+  .login-story h1 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+  .login-form h2 {
+    font-size: 34px;
+  }
+}
+.manager-shell :is(button, input, select, textarea):focus-visible {
+  outline-color: #55b7f5;
+}
+.loading-app {
+  --accent: #303633;
+  background: #f1f2f1;
+}

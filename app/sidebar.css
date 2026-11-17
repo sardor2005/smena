@@ -1,0 +1,444 @@
+/* A floating translucent navigation rail, based on the supplied expanded/collapsed reference. */
+.app-shell {
+  --rail-width: 244px;
+}
+.app-shell.sidebar-collapsed {
+  --rail-width: 86px;
+}
+.app-shell .reference-sidebar {
+  inset: 14px auto 14px 14px;
+  width: var(--rail-width);
+  padding: 21px 14px 14px;
+  border-radius: 24px;
+  border: 1px solid #ffffffa6;
+  background: #deeaeeed;
+  color: #2a3d4c;
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 14px 40px #0d233321;
+  backdrop-filter: blur(24px);
+  overflow: visible;
+  transition:
+    width 0.24s ease,
+    transform 0.24s ease;
+}
+.app-shell .main-shell {
+  margin-left: calc(var(--rail-width) + 28px);
+  width: calc(100% - var(--rail-width) - 28px);
+  transition:
+    margin-left 0.24s ease,
+    width 0.24s ease;
+}
+.reference-sidebar .rail-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  min-height: 25px;
+}
+.reference-sidebar .rail-brand > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #507b99;
+}
+.reference-sidebar .rail-brand strong {
+  font-size: 18px;
+  letter-spacing: -0.8px;
+  font-weight: 600;
+  color: #2f4657;
+}
+.reference-sidebar .rail-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 11px;
+  padding: 22px 9px 20px;
+  width: 100%;
+  text-align: left;
+  border-radius: 12px;
+}
+.reference-sidebar .rail-profile:hover {
+  background: #ffffff4d;
+}
+.reference-sidebar .rail-profile .avatar {
+  width: 42px;
+  height: 42px;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 8px #31536c12;
+  font-size: 12px;
+}
+.reference-sidebar .rail-profile > span:last-child {
+  display: block;
+  white-space: nowrap;
+}
+.reference-sidebar .rail-profile small {
+  display: block;
+  font-size: 9px;
+  color: #70899b;
+}
+.reference-sidebar .rail-profile small span {
+  color: #bc9647;
+  margin-left: 2px;
+}
+.reference-sidebar .rail-profile strong {
+  display: block;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+  color: #2e4250;
+  margin-top: 2px;
+}
+.reference-sidebar .rail-toggle {
+  position: absolute;
+  top: 86px;
+  right: -12px;
+  width: 24px;
+  height: 31px;
+  border: 1px solid #d8e3e9;
+  background: #f7fbfc;
+  color: #70899e;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px #213e4c18;
+  z-index: 2;
+}
+.reference-sidebar .rail-toggle:hover {
+  background: #fff;
+  color: #168ae4;
+}
+.reference-sidebar .rail-divider {
+  border-top: 1px solid #9db7c12e;
+  box-shadow: 0 1px #ffffff7a;
+  margin: 0 7px 20px;
+}
+.reference-sidebar .rail-section-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  color: #758b9b;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  min-height: 17px;
+}
+.reference-sidebar .rail-section-label small {
+  font-size: 8px;
+  color: #668092;
+}
+.app-shell .reference-sidebar nav {
+  gap: 5px;
+}
+.app-shell .reference-sidebar nav button {
+  min-height: 41px;
+  padding: 10px 11px;
+  gap: 11px;
+  border-radius: 11px;
+  font-size: 11px;
+  color: #526b7d;
+  font-weight: 400;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  box-shadow: none;
+}
+.app-shell .reference-sidebar nav button svg {
+  color: #718da5;
+}
+.app-shell .reference-sidebar nav button:hover {
+  background: #ffffff80;
+  color: #2e536f;
+}
+.app-shell .reference-sidebar nav button.active {
+  background: #2589f4;
+  color: #fff;
+  font-weight: 500;
+  box-shadow:
+    0 5px 12px #248bf42b,
+    inset 0 1px #ffffff40;
+}
+.app-shell .reference-sidebar nav button.active svg {
+  color: #fff;
+}
+.app-shell .reference-sidebar nav button em {
+  font-size: 8px;
+  color: #577f9c;
+  background: #ffffffa3;
+  border-radius: 50%;
+  width: 19px;
+  min-width: 19px;
+  height: 19px;
+  margin-left: auto;
+}
+.app-shell .reference-sidebar nav button.active em {
+  color: white;
+  background: #ffffff30;
+}
+.app-shell .reference-sidebar nav button .rail-notification-count {
+  background: #e8ac9b;
+  color: #673b32;
+}
+.reference-sidebar .rail-bottom {
+  margin-top: auto;
+  padding-top: 28px;
+}
+.reference-sidebar .rail-venue {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 11px;
+  background: #ffffffbd;
+  border: 1px solid #ffffffab;
+  border-radius: 13px;
+  box-shadow: 0 2px 5px #46718c04;
+}
+.reference-sidebar .rail-venue:hover {
+  background: #fff;
+}
+.reference-sidebar .rail-venue > span:nth-child(2) {
+  flex: 1;
+  white-space: nowrap;
+}
+.reference-sidebar .rail-venue strong {
+  display: block;
+  font-size: 11px;
+  color: #426176;
+  font-weight: 500;
+}
+.reference-sidebar .rail-venue small {
+  display: block;
+  font-size: 8px;
+  color: #7e99aa;
+  margin-top: 2px;
+}
+.reference-sidebar .rail-venue > svg {
+  color: #91a9ba;
+}
+.reference-sidebar .rail-venue-icon {
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #e5eff5;
+  color: #5990b2;
+  border-radius: 8px;
+}
+.reference-sidebar .rail-utilities {
+  margin: 10px 0;
+  padding: 4px;
+  border-radius: 10px;
+  background: #ffffff8c;
+}
+.reference-sidebar .rail-utilities button {
+  width: 100%;
+  min-height: 31px;
+  padding: 6px;
+  justify-content: flex-start;
+  color: #68889d;
+  gap: 9px;
+  border-radius: 7px;
+}
+.reference-sidebar .rail-utilities button:hover {
+  background: #e8f1f7;
+}
+.reference-sidebar .rail-utilities span {
+  font-size: 9px;
+  flex: 1;
+  white-space: nowrap;
+}
+.reference-sidebar .rail-utilities svg:last-child {
+  color: #9aafbc;
+}
+.reference-sidebar .rail-create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  background: #ffffffcf;
+  border: 1px solid #ffffffd9;
+  border-radius: 15px;
+  padding: 18px 10px 15px;
+  width: 100%;
+  min-height: 119px;
+}
+.reference-sidebar .rail-create:hover {
+  background: #fff;
+  box-shadow: 0 5px 15px #4e8ab514;
+}
+.reference-sidebar .rail-create-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #2589f4;
+  color: white;
+  display: grid;
+  place-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 9px #278cfa24;
+}
+.reference-sidebar .rail-create strong {
+  font-size: 11px;
+  font-weight: 500;
+  color: #425a6a;
+}
+.reference-sidebar .rail-create small {
+  font-size: 8px;
+  color: #95a8b5;
+  margin-top: 3px;
+}
+.reference-sidebar .rail-mobile-close {
+  display: none;
+}
+/* Labels stay in the accessible name when only icons are shown. */
+@media (min-width: 761px) {
+  .sidebar-collapsed .reference-sidebar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .sidebar-collapsed .rail-brand {
+    padding: 0;
+    justify-content: center;
+  }
+  .sidebar-collapsed .rail-brand strong,
+  .sidebar-collapsed .rail-profile > span:last-child,
+  .sidebar-collapsed .rail-section-label span,
+  .sidebar-collapsed .rail-section-label small,
+  .sidebar-collapsed .reference-sidebar nav button > span,
+  .sidebar-collapsed .rail-venue > span:nth-child(2),
+  .sidebar-collapsed .rail-venue > svg,
+  .sidebar-collapsed .rail-utilities span,
+  .sidebar-collapsed .rail-utilities svg:last-child,
+  .sidebar-collapsed .rail-create strong,
+  .sidebar-collapsed .rail-create small {
+    display: none;
+  }
+  .sidebar-collapsed .rail-profile {
+    padding: 22px 0 20px;
+    justify-content: center;
+  }
+  .sidebar-collapsed .rail-divider {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sidebar-collapsed .rail-section-label {
+    justify-content: center;
+    padding: 0;
+    height: 17px;
+    margin-bottom: 10px;
+  }
+  .sidebar-collapsed .rail-section-label:after {
+    content: "···";
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #809cab;
+  }
+  .app-shell.sidebar-collapsed .reference-sidebar nav button {
+    justify-content: center;
+    padding: 10px;
+    min-height: 42px;
+  }
+  .app-shell.sidebar-collapsed .reference-sidebar nav button em {
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    font-size: 7px;
+    border: 1px solid #e5f0f4;
+  }
+  .sidebar-collapsed .rail-venue {
+    justify-content: center;
+    padding: 12px 0;
+  }
+  .sidebar-collapsed .rail-utilities button {
+    justify-content: center;
+  }
+  .sidebar-collapsed .rail-create {
+    padding: 12px 0;
+    min-height: 65px;
+  }
+  .sidebar-collapsed .rail-create-icon {
+    margin: 0;
+  }
+}
+@media (max-height: 800px) and (min-width: 761px) {
+  .app-shell .reference-sidebar {
+    padding-top: 16px;
+  }
+  .reference-sidebar .rail-profile {
+    padding-top: 15px;
+    padding-bottom: 16px;
+  }
+  .reference-sidebar .rail-bottom {
+    padding-top: 14px;
+  }
+  .reference-sidebar .rail-create {
+    min-height: 87px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .reference-sidebar .rail-create-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 6px;
+  }
+  .reference-sidebar .rail-section-label {
+    margin-bottom: 7px;
+  }
+  .app-shell .reference-sidebar nav button {
+    min-height: 37px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+@media (max-width: 760px) {
+  .app-shell .reference-sidebar {
+    width: 252px;
+    inset: 10px auto 10px 10px;
+    transform: translateX(calc(-100% - 20px));
+    padding-top: 18px;
+    max-height: calc(100dvh - 20px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .app-shell .reference-sidebar.open {
+    transform: translateX(0);
+  }
+  .app-shell .main-shell {
+    margin-left: 0;
+    width: 100%;
+  }
+  .reference-sidebar .rail-toggle {
+    display: none;
+  }
+  .reference-sidebar .rail-mobile-close {
+    display: inline-flex;
+    color: #6f8d9f;
+  }
+  .reference-sidebar .rail-bottom {
+    padding-top: 22px;
+  }
+  .reference-sidebar .rail-create {
+    min-height: 96px;
+    padding: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell .reference-sidebar,
+  .app-shell .main-shell {
+    transition: none;
+  }
+}
+@media (max-height: 690px) {
+  .app-shell .reference-sidebar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+  }
+  .reference-sidebar .rail-toggle {
+    right: 4px;
+    top: 61px;
+  }
+}
